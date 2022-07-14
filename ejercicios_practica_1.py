@@ -32,6 +32,7 @@ def ej1():
     # Una vez armado el diccionario imprimirlo en pantalla con print
 
     # Comenzar aquí, recuerde el identado dentro de esta funcion
+    
     stock = {"tornillos": 100 , "tuercas": 150 , "arandelas": 300}
     print(stock)
     return()
@@ -70,6 +71,7 @@ def ej2():
     # imprimir en pantalla con print el diccionario con el stock final
 
     # Comenzar aquí, recuerde el identado dentro de esta funcion
+
     while True:
         producto = str(input("Ingrese un producto ? [tornillos, tuercas o arandelas] o FIN para salir "))
         if producto == "tornillos" :
