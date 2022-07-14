@@ -28,6 +28,16 @@ def ej3():
 
     # Comenzar aquí, recuerde el identado dentro de esta funcion
     
+    with open(archivo) as csvfile:
+        stock = list(csv.DictReader(csvfile))
+    stock_tornillos = 0
+    for i in range(len(stock)): 
+        fila = stock[i]
+        for k,v in fila.items():  
+            if k == "tornillos":
+                stock_tornillos += fila.get('tornillos')
+    print("Total de tornillos en stock: ", stock_tornillos)
+    return()
 
 
 def ej4():
@@ -47,6 +57,26 @@ def ej4():
     # utilizando "try except", tema que se verá la clase que viene.
 
     # Comenzar aquí, recuerde el identado dentro de esta funcion
+    
+    with open(archivo) as csvfile:
+        propiedades = list(csv.DictReader(csvfile))
+    depto_2amb = 0
+    depto_3amb = 0
+    for i in range(len(propiedades)): 
+        depto = propiedades[i]
+        for k,v in depto.items(): 
+            
+            if v == 2 :
+                depto_2amb += 1
+            if v == 3 :
+                depto_3amb += 1
+                
+    print("Total de departamentos de 2 ambientes: ", depto_2amb)
+    print("Total de departamentos de 3 ambientes: ", depto_3amb)
+    return()
+    
+     
+
 
 
 if __name__ == '__main__':
